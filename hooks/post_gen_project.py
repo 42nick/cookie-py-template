@@ -1,12 +1,9 @@
 from pathlib import Path
 from textwrap import dedent
 
-
-def main():
-    
+def create_vsc_folder():
     print("create_vscode_folder.py")
     create_vsc_folder = "{{cookiecutter.additional_vsc_settings}}" == "y"
-
     if create_vsc_folder:
         # initialize the paths
         vsc_path = Path(".vscode")
@@ -57,6 +54,25 @@ def main():
                 )
             )
 
+def create_sonarcloud_settings():
+    if "{{cookiecutter.sonarcloud}}" == "y":
+        sonar_cloud_settings_path = Path(".sonarcloud.properties")
+        with open(sonar_cloud_settings_path, "w") as f:
+            sonarcloud_organization = input("Enter your sonarcloud organization: ")
+            
+            f.write(
+                dedent(
+                    f"""\
+                    sonar.projectKey={{cookiecutter.project_slug}}
+                    sonar.organization={sonarcloud_organization}
+                    sonar.python.coverage.reportPaths=reports/coverage.xml
+                    """
+                )
+            )
+def main():
+    
+    create_vsc_folder()
+    create_sonarcloud_settings()
 
 if __name__ == "__main__":
     main()

@@ -57,7 +57,7 @@ disable = """
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = "-v --cov={{cookiecutter.project_slug}} --cov-branch --cov-report html:reports/html --cov-report=term-missing"
+addopts = "-v --cov={{cookiecutter.project_slug}} --cov-branch --cov-report html:reports/html --cov-report xml:reports/coverage.xml --cov-report=term-missing"
 
 [tool.coverage.report]
 exclude_lines = [

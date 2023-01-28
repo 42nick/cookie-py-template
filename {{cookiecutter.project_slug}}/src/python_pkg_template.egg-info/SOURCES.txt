@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/python_pkg_template/__init__.py
+src/python_pkg_template/example_function.py
+src/python_pkg_template/main.py
+src/python_pkg_template.egg-info/PKG-INFO
+src/python_pkg_template.egg-info/SOURCES.txt
+src/python_pkg_template.egg-info/dependency_links.txt
+src/python_pkg_template.egg-info/requires.txt
+src/python_pkg_template.egg-info/top_level.txt

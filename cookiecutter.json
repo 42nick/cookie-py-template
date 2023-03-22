@@ -6,8 +6,8 @@
     "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
     "project_short_description": "This package is going to blow your mind.",
     "version": "0.0.0",
-    " ": "Do you want to add a .vscode folder and useful python related settings e.g. autoformatting on save with black and isort?\n[Please press enter to continue]",
+    "Do you want to add a .vscode folder and useful python related settings e.g. autoformatting on save with black and isort?\n[Please press enter for the next input]": "",
     "additional_vsc_settings": "y",
-    " ": "Do you want to like your project to sonarcloud.io for code quality analysis? You need to provide the sonarcloud organization in the next step and set the SONAR_TOKEN environment variable.\n[Please press enter to continue]",
+    "Do you want to link your project to sonarcloud.io for code quality analysis? You need to provide the sonarcloud organization in the next step and set the SONAR_TOKEN environment variable.\n[Please press enter for the next input]": "",
     "sonarcloud": "y"
 }

@@ -28,6 +28,7 @@ def create_vsc_folder():
                         "python.terminal.activateEnvironment": true,
                         "[python]": {
                             "editor.codeActionsOnSave": {
+                                "editor.formatOnSave": true,
                                 "source.organizeImports": true
                             },
                         },

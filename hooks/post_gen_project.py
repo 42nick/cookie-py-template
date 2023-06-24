@@ -60,7 +60,7 @@ def create_vsc_folder():
             )
 
         # fill launch.json to properly debug python code and the tests
-        with open(vsc_extension_path, "w") as f:
+        with open(vsc_launch_path, "w") as f:
             f.write(
                 dedent(
                     """\

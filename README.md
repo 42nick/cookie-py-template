@@ -11,7 +11,9 @@ This package is based on [cookiecutter](https://github.com/cookiecutter/cookiecu
 The easiest way to use this template is with [cruft](https://github.com/cruft/cruft#installation) (pip3 install cruft).
     
 ```bash
-cruft create https://github.com/42nick/cookie-py-template
+cruft create https://github.com/42nick/cookie-py-template 
+or
+python3 -m cruft create https://github.com/42nick/cookie-py-template
 ```
 
 You will be guided through a set of questions to create your project. If you just one want to try it out you can leave everything as default (without the fear of having a washing machine bought :grin:).

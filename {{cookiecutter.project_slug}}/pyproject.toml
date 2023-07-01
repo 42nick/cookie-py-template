@@ -50,6 +50,7 @@ disable = """
     missing-function-docstring,
     missing-module-docstring
     """
+max-args = 10
 # generated-members = """
 #     torch.*
 #     numpy.*

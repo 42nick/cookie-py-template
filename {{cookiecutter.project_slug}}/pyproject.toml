@@ -1,29 +1,32 @@
-[build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
-
-[project]
+[tool.poetry]
 name = "{{cookiecutter.project_slug}}"
-version = "0.0.1"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
 readme = "README.md"
-requires-python = ">=3.7"
-license = { text = "MIT License" }
-dependencies = []
-[project.optional-dependencies]
-dev = ["{{cookiecutter.project_slug}}[test]", "{{cookiecutter.project_slug}}[docs]", "tox"]
-test = ["pytest", "pytest-cov", "coverage", "black", "isort", "pylint", "mypy"]
-docs = ["sphinx", "myst-parser", "sphinx_rtd_theme"]
 
-[tool.setuptools.packages.find]
-where = ["src"] # list of folders that contain the packages (["."] by default)
-include = [
-  "{{cookiecutter.project_slug}}*",
-] # package names should match these glob patterns (["*"] by default)
-namespaces = false # to disable scanning PEP 420 namespaces (true by default)
+[tool.poetry.dependencies]
+python = "^3.8"
 
-[tool.isort]
+[tool.poetry.group.test.dependencies]
+pytest = "^7.4.2"
+pytest-cov = "^4.1.0"
+coverage = "^7.3.2"
+black = "^23.9.1"
+isort = "^5.12.0"
+pylint = "^3.0.1"
+mypy = "^1.5.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tools.isort]
 skip = [".gitignore", ".dockerignore"]
-skip_glob = ["docs/*", ".venv/*", "venv/*", ".tox/*"]
+skip_glob = ["docs/*"]
 profile = "black"
 line_length = 120
 
@@ -50,7 +53,6 @@ disable = """
     missing-function-docstring,
     missing-module-docstring
     """
-max-args = 10
 # generated-members = """
 #     torch.*
 #     numpy.*
@@ -58,7 +60,7 @@ max-args = 10
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = "-v --cov={{cookiecutter.project_slug}} --cov-branch --cov-report html:reports/html --cov-report xml:reports/coverage.xml --cov-report=term-missing"
+addopts = "-v --cov={{cookiecutter.project_slug}} --cov-branch --cov-report html:reports/html --cov-report=term-missing"
 
 [tool.coverage.report]
 exclude_lines = [
@@ -73,6 +75,7 @@ exclude_lines = [
 [tool.coverage.run]
 branch = true
 data_file = "reports/.coverage"
+
 
 [tool.mypy]
 strict = true

@@ -1,12 +1,10 @@
-from {{cookiecutter.project_slug}}.example_function import add_two_values
-
-
 def main() -> None:
     """
     The core function of this awesome project.
     """
-    add_two_values(2, 3)
+    
+    print(f"Hello world :)")
 
 
 if __name__ == "__main__":
-    pass
+    main()

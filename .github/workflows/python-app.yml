@@ -5,7 +5,7 @@ name: Testing cookie-cutter-template
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "master", "feat/poetry" ]
   pull_request:
     branches: [ "master" ]
 

@@ -8,13 +8,21 @@ This package is based on [cookiecutter](https://github.com/cookiecutter/cookiecu
 * documentation
 
 ## Usage
-The easiest way to use this template is with [cruft](https://github.com/cruft/cruft#installation) (pip3 install cruft).
+The easiest way to use this template is with [cruft](https://github.com/cruft/cruft#installation) (`pip3 install cruft`).
     
 ```bash
-cruft create https://github.com/42nick/cookie-py-template -c feat/poetry
+cruft create https://github.com/42nick/cookie-py-template 
+```
 or
+```bash
+python3 -m cruft create https://github.com/42nick/cookie-py-template
+```
+
+You can also checkout the version of this repository that is handled with poetry via
+```bash
 python3 -m cruft create https://github.com/42nick/cookie-py-template -c feat/poetry
 ```
+
 
 You will be guided through a set of questions to create your project. If you just one want to try it out you can leave everything as default (without the fear of having a washing machine bought :grin:).
 

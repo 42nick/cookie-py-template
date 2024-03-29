@@ -13,9 +13,10 @@ python = "^3.8"
 pytest = "^7.4.2"
 pytest-cov = "^4.1.0"
 coverage = "^7.3.2"
-black = "^23.9.1"
+black = "^24.3.0"
 isort = "^5.12.0"
-pylint = "^3.0.1"
+pylint = "^3.1.0"
+dill = "^0.3.8" # Note: Only needed as pylint is not supporting it currently.
 mypy = "^1.5.1"
 tox = "^4.14.2"
 

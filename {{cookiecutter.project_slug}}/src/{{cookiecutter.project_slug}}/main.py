@@ -1,9 +1,7 @@
 def main() -> None:
-    """
-    The core function of this awesome project.
-    """
-    
-    print(f"Hello world :)")
+    """The core function of this awesome project."""
+
+    print("Hello world :)")
 
 
 if __name__ == "__main__":

@@ -1,12 +1,10 @@
-from {{cookiecutter.project_slug}}.example_function import add_two_values
+"""Just a placeholder for the main function of the project."""
 
 
 def main() -> None:
-    """
-    The core function of this awesome project.
-    """
-    add_two_values(2, 3)
+    """Run the core function of this awesome project."""
+    print("Hello world :)")
 
 
 if __name__ == "__main__":
-    pass
+    main()

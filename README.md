@@ -23,6 +23,11 @@ You can also checkout the version of this repository that is handled with poetry
 python3 -m cruft create https://github.com/42nick/cookie-py-template -c feat/poetry
 ```
 
+If you have this repository already locally you can use the following command to update the template:
+```bash
+cruft create /path/to/your/local/cookie-py-template
+```
+
 
 You will be guided through a set of questions to create your project. If you just one want to try it out you can leave everything as default (without the fear of having a washing machine bought :grin:).
 

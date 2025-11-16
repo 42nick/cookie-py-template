@@ -12,10 +12,7 @@ With [PEP 631](https://peps.python.org/pep-0631/) it becomes easily to add optio
 ## Installation with uv
 ```
 uv v -p 3.11 && source .venv/bin/activate
-uv sync
-
-# or without lock-file being built
-uv pip install -e .
+uv sync --all-extras
 ```
 
 ## Installation with pip

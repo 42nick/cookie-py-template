@@ -3,6 +3,7 @@ import sys
 
 import {{ cookiecutter.project_slug }}
 
+
 sys.path.insert(0, os.path.abspath("."))
 sys.path.insert(0, os.path.abspath("../.."))
 

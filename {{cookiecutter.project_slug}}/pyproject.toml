@@ -36,6 +36,9 @@ lines-after-imports = 2
 [tool.ruff.lint.per-file-ignores]
 "tests/*" = ["S101", "S603"]
 
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
 [tool.pylint.messages_control]
 max-line-length = 120
 disable = """

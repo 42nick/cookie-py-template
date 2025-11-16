@@ -2,8 +2,9 @@ from typing import Union
 
 
 def add_two_values(val1: Union[int, float], val2: Union[int, float]) -> Union[int, float]:
-    """
-    This function adds to values. It is only here to show you that this text will be also found in the documentation.
+    """Add two values.
+
+    It is only here to show you that this text will be also found in the documentation.
 
     Args:
         val1 (Union[int, float]): First input argument.

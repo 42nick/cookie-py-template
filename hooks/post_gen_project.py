@@ -28,15 +28,16 @@ def create_vsc_folder():
                         "python.terminal.activateEnvironment": true,
                         "[python]": {
                             "editor.codeActionsOnSave": {
-                                "editor.formatOnSave": true,
-                                "source.organizeImports": true
+                                "editor.formatOnSave": "always",
+                                "source.organizeImports": "always",
+                                "source.fixAll": "explicit"
                             },
+                            "editor.defaultFormatter": "charliermarsh.ruff"
                         },
                         "python.analysis.completeFunctionParens": true,
                         "python.analysis.autoImportCompletions": true,
                         "python.analysis.autoImportUserSymbols": true,
-                        "python.formatting.provider": "black",
-                    }                    
+                    }
                     """
                 )
             )
@@ -51,11 +52,12 @@ def create_vsc_folder():
                         "recommendations": [
                             "ms-python.python",
                             "ms-python.vscode-pylance",
-                            "ms-python.isort",
                             "KevinRose.vsc-python-indent",
-                            "njpwerner.autodocstring"
+                            "njpwerner.autodocstring",
+                            "charliermarsh.ruff"
+                            ""
                         ]
-                    }                    
+                    }
                     """
                 )
             )
@@ -94,7 +96,7 @@ def create_vsc_folder():
                                 "justMyCode": true
                             },
                         ]
-                    }               
+                    }
                     """
                 )
             )
@@ -104,7 +106,7 @@ def create_sonarcloud_settings():
         sonar_cloud_settings_path = Path(".sonarcloud.properties")
         with open(sonar_cloud_settings_path, "w") as f:
             sonarcloud_organization = input("Enter your sonarcloud organization: ")
-            
+
             f.write(
                 dedent(
                     f"""\
@@ -115,7 +117,7 @@ def create_sonarcloud_settings():
                 )
             )
 def main():
-    
+
     create_vsc_folder()
     create_sonarcloud_settings()
 

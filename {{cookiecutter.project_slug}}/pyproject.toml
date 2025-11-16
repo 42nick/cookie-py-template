@@ -39,17 +39,6 @@ lines-after-imports = 2
 [tool.ruff.lint.pydocstyle]
 convention = "google"
 
-[tool.pylint.messages_control]
-max-line-length = 120
-disable = """
-    missing-function-docstring,
-    missing-module-docstring
-    """
-# generated-members = """
-#     torch.*
-#     numpy.*
-#     """
-
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-v --cov={{cookiecutter.project_slug}} --cov-branch --cov-report html:reports/html --cov-report xml:reports/coverage.xml --cov-report=term-missing"

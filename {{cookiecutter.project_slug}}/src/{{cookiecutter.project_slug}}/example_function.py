@@ -1,9 +1,10 @@
-from typing import Union
+"""Example function module."""
 
 
-def add_two_values(val1: Union[int, float], val2: Union[int, float]) -> Union[int, float]:
-    """
-    This function adds to values. It is only here to show you that this text will be also found in the documentation.
+def add_two_values(val1: float, val2: float) -> int | float:
+    """Add two values.
+
+    It is only here to show you that this text will be also found in the documentation.
 
     Args:
         val1 (Union[int, float]): First input argument.

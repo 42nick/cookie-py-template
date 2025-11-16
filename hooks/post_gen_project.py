@@ -36,7 +36,6 @@ def create_vsc_folder():
                         },
                         "python.analysis.completeFunctionParens": true,
                         "python.analysis.autoImportCompletions": true,
-                        "python.analysis.autoImportUserSymbols": true,
                     }
                     """
                 )

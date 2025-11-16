@@ -1,3 +1,5 @@
+"""Main module of the awesome project."""
+
 from {{cookiecutter.project_slug}}.example_function import add_two_values
 
 

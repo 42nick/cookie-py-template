@@ -11,7 +11,7 @@ license = { text = "MIT License" }
 dependencies = []
 [project.optional-dependencies]
 dev = ["{{cookiecutter.project_slug}}[test]", "{{cookiecutter.project_slug}}[docs]", "tox"]
-test = ["pytest", "pytest-cov", "coverage", "mypy"]
+test = ["pytest", "pytest-cov", "coverage", "mypy", "ruff"]
 docs = ["sphinx", "myst-parser", "sphinx_rtd_theme"]
 
 [tool.setuptools.packages.find]
